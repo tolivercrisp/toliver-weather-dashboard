@@ -30,6 +30,10 @@ body {
     max-width: 400px;
 }
 
+.card {
+    width: 8rem;
+}
+
 .card-text {
     font-size: 12px;
 }

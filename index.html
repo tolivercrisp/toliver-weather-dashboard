@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <div class="container mw-50 mh-70" id="all-container">
+
         <!-- header -->
         <div class="row justify-content-md-center">
             <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -32,49 +34,89 @@
             </nav>
             
    
+        <!-- Today -->
+        <div class="row container-sm justify-content-center m-1">
+            <div class="col card-columns">
+                <div id="current_forecast" class="col card">
+                    <div class="card-body">
+                        <h5 class="card-title">Date</h5>
+                        <p class="card-text">Card Text</p>
+                        <p class="card-text">Card Text</p>
+                        <p class="card-text">Card Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="row">
-            <div id="current_forecast" class="col">
-                <h3>Current local forecast:</h3>
-            </div>  
-        </div>
-        <div class="row card-deck">
-            <div id="header2" class="col card">
-                <div class="card-body">
-                    <h5 class="card-title">Date</h5>
-                    <p class="card-text">Card Text</p>
-                    <p class="card-text">Card Text</p>
-                    <p class="card-text">Card Text</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-            </div>
-            <div id="blank" class="col">
-
-            </div>
-        </div>
 
     <!-- 5 Day Forecast -->
-        <div class="row">
+        <div class="row justify-content-center">
             <h3>5-Day Forecast:</h3>
-            <div id="weather_display" class="col card-deck">
-                    <div id="forecast_card_1" class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Card Text</p>
-                            <p class="card-text">Card Text</p>
-                            <p class="card-text">Card Text</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
+        </div>
+            <div id="weather_display" class="col card-columns">
+                <!-- Card 1 -->
+                <div id="card_1" class="card text-center h-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">temp</li>
+                            <li class="list-group-item">wind</li>
+                            <li class="list-group-item">humid</li>
+                        </ul>
                     </div>
-                    <div id="forecast_card_2" class="card">Day 2</div>
-                    <div id="forecast_card_3" class="card">Day 3</div>
-                    <div id="forecast_card_4" class="card">Day 4</div>
-                    <div id="forecast_card_5" class="card">Day 5</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div id="card_2" class="card text-center h-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">temp</li>
+                            <li class="list-group-item">wind</li>
+                            <li class="list-group-item">humid</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div id="card_3" class="card text-center h-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">temp</li>
+                            <li class="list-group-item">wind</li>
+                            <li class="list-group-item">humid</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div id="card_4" class="card text-center h-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">temp</li>
+                            <li class="list-group-item">wind</li>
+                            <li class="list-group-item">humid</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div id="card_5" class="card text-center h-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">temp</li>
+                            <li class="list-group-item">wind</li>
+                            <li class="list-group-item">humid</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
-    </div>
+
 <script src="./assets/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
