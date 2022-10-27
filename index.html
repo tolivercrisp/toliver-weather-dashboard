@@ -39,16 +39,19 @@
                     <div class="card-header border-bottom-0">
                         <p class="card-title fs-6">CURRENT WEATHER</p>
                         <!-- this <h6> will display the moment.js current time -->
-                        <h6 id="current_time" class="card-subtitle text-muted">moment.js(current_time)</h6>
+                        <h6 id="current_time" class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-text">
+                        <p id="current_temp"></p>
                     </div>   
                 </div>
 
                 <!-- Today Card #2 -->
                 <div id="today_right" class="col card ml-n1 border-start-0">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item pt-5">Wind</li>
-                        <li class="list-group-item">Wind Gust</li>
-                        <li class="list-group-item pb-4">Humidity</li>
+                        <li id="current_wind" class="list-group-item pt-5">Wind</li>
+                        <li id="current_wind_gust" class="list-group-item">Wind Gust</li>
+                        <li id="current_humidity" class="list-group-item pb-4">Humidity</li>
                     </ul>  
                 </div>
             </div>
@@ -61,34 +64,34 @@
                 <table class="table table-striped bg-light mt-4">
                     <tbody>
                           <tr>
-                            <th scope="row">Date</th>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>H</td>
+                            <th id="1_date" scope="row">Date</th>
+                            <td id="1_temp">T</td>
+                            <td id="1_wind">W</td>
+                            <td id="1_humidity">H</td>
                           </tr>
                           <tr>
-                            <th scope="row">Date</th>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>H</td>
+                            <th id="2_date" scope="row">Date</th>
+                            <td id="2_temp">T</td>
+                            <td id="2_wind">W</td>
+                            <td id="2_humidity">H</td>
                           </tr>
                           <tr>
-                            <th scope="row">Date</th>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>H</td>
+                            <th id="3_date" scope="row">Date</th>
+                            <td id="3_temp">T</td>
+                            <td id="3_wind">W</td>
+                            <td id="3_humidity">H</td>
                           </tr>
                           <tr>
-                            <th scope="row">Date</th>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>H</td>
+                            <th id="4_date" scope="row">Date</th>
+                            <td id="4_temp">T</td>
+                            <td id="4_wind">W</td>
+                            <td id="4_humidity">H</td>
                           </tr>
                           <tr>
-                            <th scope="row">Date</th>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>H</td>
+                            <th id="5_date" scope="row">Date</th>
+                            <td id="5_temp">T</td>
+                            <td id="5_wind">W</td>
+                            <td id="5_humidity">H</td>
                           </tr>
                     </tbody>
                   </table>
@@ -101,8 +104,12 @@
         </div>
     </div>
 
-<script src="./assets/js/script.js"></script>
+    <!-- moment.js  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- bootstrap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- script.js -->
+<script src="./assets/js/script.js"></script>
+
 </body>
 </html>
