@@ -1,15 +1,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: none;
+    background-image:  url('https://source.unsplash.com/1600x900/?landscape');
 
 }
 
 .container {
     /* background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%); */
-    background-color: #181818;
-    padding: 3em;
+    background-color: #000000d0;
+    padding: 2em;
     border-radius: 70px;
-    margin: 1em;
+    margin: 2em;
     max-height: 85vh;
     max-width: 60vw;
 }
