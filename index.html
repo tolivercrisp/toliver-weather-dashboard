@@ -13,112 +13,90 @@
 
 <body>
     <!-- document container (everything) -->
-    <div class="container mw-50 mh-100" id="all-container">
+    <div class="container mw-50 mh-100 vw-60 vh-85" id="all-container">
 
         <!-- Header -->
-        <div class="justify-content-md-center">
-            <nav class="navbar navbar-expand-m navbar-light rounded w-100 pl-5">
-                <div id="header_title" class="text-center">
-                    <h4 class="fs-4 text-center text-light">Weather Dashboard</h4>
+        <div class="row justify-content-md-center">
+            <div id="header_title" class="col w-auto">
+                <h4 class="fs-1 text-center text-light">Weather Dashboard</h4>
+            </div>
+            <div id="header_search" class="col w-auto">
+                <div class="input-group-append">
+                    <label for="search_input" class="form-label"></label>
+                    <input type="text" class="form-control" id="search_input" placeholder="Search for a city..." name="">
+                    <button type="submit" id="searchBtn" class="btn btn-primary">.</button>
                 </div>
-                <div class="search-div">
-                    <div class="input-group-append w-100">
-                        <label for="search_input" class="form-label"></label>
-                        <input type="text" class="form-control w-780" id="search_input" placeholder="Search for a city..." name="">
-                        <button type="submit" id="searchBtn" class="btn btn-primary">.</button>
-                    </div>
-                </div>
-            </nav> 
+            </div>
         </div>
+            
 
-            
-            
-   
-        <!-- Today -->
-        <div class="container-m justify-content-center mt-4 w-60">
-            <div class="card-deck m-0">
+        <!-- Today  -->
+        <div class="container-sm justify-content-center mt-5 ml-5 mr-5"">
+            <div class="row card-deck">
+
                 <!-- Today Card #1 -->
-                <div id="current_forecast_left" class="card mr-n1 border-end-0">
-                        <div class="card-header border-bottom-0">
-                            <p class="card-title">CURRENT WEATHER</p>
-                            <!-- this <h6> will display the moment.js current time -->
-                            <h6 id="current_time" class="card-subtitle mb-2 text-muted">12:00 pm</h6>
-                        </div>   
+                <div id="today_left" class="col card mr-n1">
+                    <div class="card-header border-bottom-0">
+                        <p class="card-title fs-6">CURRENT WEATHER</p>
+                        <!-- this <h6> will display the moment.js current time -->
+                        <h6 id="current_time" class="card-subtitle text-muted">moment.js(current_time)</h6>
+                    </div>   
                 </div>
+
                 <!-- Today Card #2 -->
-                <div id="current_forecast_right" class="card ml-n1 border-start-0">
+                <div id="today_right" class="col card ml-n1 border-start-0">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item pt-4">Wind:</li>
-                        <li class="list-group-item">Humidity</li>
-                        <li class="list-group-item pb-4">humid</li>
+                        <li class="list-group-item pt-5">Wind</li>
+                        <li class="list-group-item">Wind Gust</li>
+                        <li class="list-group-item pb-4">Humidity</li>
                     </ul>  
                 </div>
             </div>
         </div>
 
-    <!-- 5 Day Forecast -->
-        <!-- Card Column -->
-        <div id="weather_display" class="row card-columns justify-content-center mt-4">
-            <!-- Card 1 -->
-            <div id="card_1" class="card text-center shadow " style="width: 7rem;">
-                <div class="card-header">
-                    <h5 class="card-title">Date</h5>
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">temp</li>
-                        <li class="list-group-item">wind</li>
-                        <li class="list-group-item">humid</li>
-                    </ul>
-            </div>
 
-            <!-- Card 2 -->
-            <div id="card_2" class="card text-center shadow" style="width: 7rem;">
-                <div class="card-header">
-                    <h5 class="card-title">Date</h5>
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">temp</li>
-                        <li class="list-group-item">wind</li>
-                        <li class="list-group-item">humid</li>
-                    </ul>
+        <!-- Forecast -->
+        <div class="row justify-content-center">
+            <div class="w-75 col-auto">
+                <table class="table table-striped bg-light mt-5">
+                    <tbody>
+                          <tr>
+                            <th scope="row">Date</th>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>H</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Date</th>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>H</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Date</th>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>H</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Date</th>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>H</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Date</th>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>H</td>
+                          </tr>
+                    </tbody>
+                  </table>
             </div>
-
-            <!-- Card 3 -->
-            <div id="card_3" class="card text-center" style="width: 7rem;">
-                <div class="card-header">
-                    <h5 class="card-title">Date</h5>
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">temp</li>
-                        <li class="list-group-item">wind</li>
-                        <li class="list-group-item">humid</li>
-                    </ul>
+    
             </div>
-
-            <!-- Card 4 -->
-            <div id="card_4" class="card text-center" style="width: 7rem;">
-                <div class="card-header">
-                    <h5 class="card-title">Date</h5>
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">temp</li>
-                        <li class="list-group-item">wind</li>
-                        <li class="list-group-item">humid</li>
-                    </ul>
-            </div>
-
-            <!-- Card 5 -->
-            <div id="card_5" class="card text-center" style="width: 7rem;">
-                <div class="card-header">
-                    <h5 class="card-title">Date</h5>
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">temp</li>
-                        <li class="list-group-item">wind</li>
-                        <li class="list-group-item">humid</li>
-                    </ul>
-            </div>
-
+            
+    
             
         </div>
     </div>
