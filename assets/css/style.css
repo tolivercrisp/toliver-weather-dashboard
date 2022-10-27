@@ -11,38 +11,29 @@ body {
 
 }
 
-.search-div {
-    border-radius: 30px;
-}
-
-.header {
-    font-size: 1px;
-}
-
 .container {
     background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
     padding: 2em;
     border-radius: 30px;
-    height: 75vh;
+    height: 60vh;
     width: 60vw;
     margin: 1em;
     max-height: 600px;
     max-width: 400px;
 }
 
-.card-text {
-    font-size: 12px;
+
+/* removes the margins so the two "current weather" cards look like one long card */
+.mr-n1 {
+    margin-right: -0.25rem !important;
+}
+.ml-n1 {
+    margin-left: -0.25rem !important;
+
 }
 
 
 /* media query stuff */
 
-.card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 5;
-    }
-    @include media-breakpoint-only(xl) {
-      column-count: 5;
-    }
-  }
+
 
