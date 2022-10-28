@@ -52,30 +52,28 @@ function displayTime() {
 }
 displayTime()
 
-
-
 // fetch OpenWeatherMap API
-function getApi(city) {
-    var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=dallas&appid=87f9ba21f1aa6515467d3fc1f7b523fc"
-    fetch(requestUrl).then(function(response) {
-        if (response.ok) {
-            response.json().then(function (data) {
-                console.log(data)
-                console.log(data.list)
-            })
-        }
+function fetchWeather () {
+    // query selectors for the url
+    // the city that the API fetches is the value of the users search input
+    let cityName = document.getElementById('search_input').value;
+    let key = '06cc7efd0e5386068ec3c390bcfd0183';
+    let lang = 'en';
+    let units = 'metric';
+    let url = "https://api.openweathermap.org/geo/1.0/direct?city=${cityName}&appid=${key}&units=${units}&lang=${lang}";
+
+    fetch(url)
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((data) => {
+      showWeather(data);
     })
 }
-getApi()
 
-searchBtn.addEventListener('click', getApi)
-
-
-//displays the weather
-function displayWeather (data) {
-
-
-
+function search () {
+    document.getElementById("searchBtn").addEventListener("click", fetchWeather)
+    
 
 }
 
