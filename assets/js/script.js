@@ -12,7 +12,6 @@ var currentHumidity = document.getElementById("current_humidity");
 // Variables -- Five Day Forecast
 
 // One Day
-document.getElementById("");
 var OneDayDate = document.getElementById("2_date");
 var OneDayTemp = document.getElementById("2_temp");
 var OneDayWind = document.getElementById("2_wind");
@@ -51,31 +50,29 @@ function displayTime() {
     currentTime.innerHTML = moment().format("h:mm a");
 }
 displayTime()
+var apiKey = '1010ae095ef26a48fc294141617d504c';
 
 // fetch OpenWeatherMap API
 function fetchWeather () {
     // query selectors for the url
     // the city that the API fetches is the value of the users search input
-    let cityName = document.getElementById('search_input').value;
-    let key = '06cc7efd0e5386068ec3c390bcfd0183';
-    let lang = 'en';
-    let units = 'metric';
-    let url = "https://api.openweathermap.org/geo/1.0/direct?city=${cityName}&appid=${key}&units=${units}&lang=${lang}";
-
-    fetch(url)
-    .then((resp) => {
-      return resp.json();
-    })
-    .then((data) => {
-      showWeather(data);
-    })
-}
-
-function search () {
-    document.getElementById("searchBtn").addEventListener("click", fetchWeather)
+    // var lat = document.getElementById("latitude").value;
+    // var lon = document.getElementById("longitude").value;
+    var city = 'Dallas'
     
-
+    fetch('https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid'+apiKey)
+    .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      });
 }
+fetchWeather()
+// document.getElementById("searchBtn").addEventListener("click", fetchWeather)
+
+// ill also need to use the geocoder api to turn the cordinates into city namers
+
 
 
 var currentForecast = document.getElementById('current_forecast')
